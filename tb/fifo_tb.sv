@@ -11,11 +11,11 @@ module fifo_tb
 	logic 						rst_i;
 	logic 						read_i;
 	logic 						write_i;
-	logic [WIDTH_DATA -1:0] 			data_in;
+	logic	[WIDTH_DATA -1:0]	data_in;
 //output
 	logic 						fifo_empty_o;
 	logic 						fifo_full_o;
-	logic [WIDTH_DATA-1:0] 				data_out;
+	logic	[WIDTH_DATA-1:0]	data_out;
 	integer 					i;
 
 	fifo_junior fifo_ut (
