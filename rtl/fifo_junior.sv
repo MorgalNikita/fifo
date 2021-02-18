@@ -57,7 +57,7 @@ end
 
 integer i ;
 
-always_ff @(posedge clk_i) begin
+always_ff @(posedge clk_i or posedge rst_i) begin
 	if ( rst_i ) begin
 	for(i=0; i<ADDR_W; i = i+1)
 		mem_fifo[i] <= 0;
