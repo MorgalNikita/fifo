@@ -1,9 +1,7 @@
 quit -sim
 
-cd ..
-cd rtl
 vlib work
-vlog -sv fifo_junior.sv
+vlog -sv ../rtl/fifo_junior.sv
 vlog -sv ../tb/fifo_tb.sv
 
 vsim -novopt fifo_tb
