@@ -1,13 +1,15 @@
 quit -sim
+
+cd ..
+cd rtl
 vlib work
-
 vlog -sv fifo_junior.sv
-vlog -sv fifo_tb.sv
-
+vlog -sv ../tb/fifo_tb.sv
 
 vsim -novopt fifo_tb
-add log -r /*
 
+
+add log -r /*
 add wave  \
 sim:/fifo_tb/clk_i \
 sim:/fifo_tb/rst_i \
@@ -21,6 +23,4 @@ sim:/fifo_tb/fifo_ut/mem_fifo \
 sim:/fifo_tb/fifo_ut/rd_ptr \
 sim:/fifo_tb/fifo_ut/wr_ptr \
 sim:/fifo_tb/fifo_ut/fifo_count
-
-
 run 5 ns
